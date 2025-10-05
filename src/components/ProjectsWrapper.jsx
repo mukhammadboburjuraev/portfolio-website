@@ -2,7 +2,7 @@ import Image from "next/image";
 import { projectsJson } from "./projects-json.js";
 import Link from "next/link.js";
 
-function ProjectsWrapper() {
+function ProjectsWrapper({ t }) {
   return (
     <div className="grid grid-cols-3 w-[950px] gap-8">
       {projectsJson.map((project, i) => (
@@ -16,7 +16,7 @@ function ProjectsWrapper() {
             </span>
             <Image
               src={project.image}
-              alt="Here is image"
+              alt="Project Image 1"
               className="rounded"
               width={280}
               height={280}
@@ -26,10 +26,10 @@ function ProjectsWrapper() {
               {project.projectName}
             </h1>
             <p className="text-gray-600 text-xs tracking-[0.5px] font-light ">
-              {project.desc}
+              {t(`projects-${i + 1}`)}
             </p>
             <button className="px-8 py-2 bg-black text-white mt-5 rounded">
-              <Link href={project.sitelink}>자세히 보기</Link>
+              <Link href={project.sitelink}>{t("projects-btn")}</Link>
             </button>
           </div>
         </div>

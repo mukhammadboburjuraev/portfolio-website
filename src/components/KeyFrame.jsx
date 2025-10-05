@@ -1,20 +1,22 @@
 "use client";
 import { useFadeScroll } from "./useFadeScroll";
 import KayFrameWrapper from "./KayFrameWrapper";
+import "../components/i18n";
+import { useTranslation } from "react-i18next";
 
-function KeyFrame() {
+function KeyFrame({ t }) {
   useFadeScroll();
   return (
     <div className="w-screen flex flex-col justify-center items-center bg-white text-black py-30">
       <div data-aos="fade-up" className="text-center">
-        <h1 className="font-bold text-4xl">핵심 역량</h1>
+        <h1 className="font-bold text-4xl">{t("core-competencies")}</h1>
         <p className="text-gray-600 mt-2.5">
-          아이디어를 신뢰할 수 있는 개발쪽으로 구현합니다.
+          {t("core-competencies-subtitle")}
         </p>
       </div>
 
       <div className="flex">
-        <KayFrameWrapper />
+        <KayFrameWrapper t={t} />
       </div>
     </div>
   );
