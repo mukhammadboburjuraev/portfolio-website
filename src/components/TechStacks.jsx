@@ -32,7 +32,13 @@ function TechStacks() {
       <div className="flex justify-between items-center gap-5 mt-5">
         {iconsTechStackSecond.map((icon, i) => (
           <div className="flex flex-col bg-white p-3 rounded" key={i}>
-            <div className="w-10">{icon}</div>
+            <div className="w-10">
+              {icon === "GithubIcon" ? (
+                <p className="text-black">{icon}</p>
+              ) : (
+                icon
+              )}
+            </div>
           </div>
         ))}
       </div>
