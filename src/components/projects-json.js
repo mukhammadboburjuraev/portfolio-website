@@ -7,6 +7,7 @@ export const projectsJson = [
     projectName: "Ismir Etiket (Clothing Business Website)",
     desc: "Ismir Etiket - 2009년에 활동을 시작했으며 여전히 고객의 마음속에서 특별한 위치를 차지하고 있습니다. 당사의 비즈니스 라인은 고품질 제품 생산을 전문으로 합니다",
     sitelink: "https://ismiretiket.netlify.app/",
+    techStacks: ["Vite", "React", "Tailwind CSS", "i18next"],
   },
   {
     stack: "FrontEnd",

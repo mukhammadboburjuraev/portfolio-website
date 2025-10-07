@@ -59,7 +59,7 @@ function ProjectsWrapper({ t }) {
           </div>
         </div>
       ))}
-      <ProjectModal project={selectedProject} onClose={closeModal} />
+      <ProjectModal project={selectedProject} onClose={closeModal} t={t} />
     </div>
   );
 }
