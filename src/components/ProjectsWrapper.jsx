@@ -26,18 +26,20 @@ function ProjectsWrapper({ t }) {
             style={{ background: "rgba(0, 0, 0, 0)" }}
           ></div>
           <div className="relative max-w-72 ">
-            <Image
-              src={project.image}
-              alt="Project Image 1"
-              className="rounded"
-              width={280}
-              height={280}
-            />
+            {project.wrapperImage && (
+              <Image
+                src={project.wrapperImage}
+                alt="Project Image 1"
+                className="rounded"
+                width={280}
+                height={280}
+              />
+            )}
             <h1 className="text-2xl font-extrabold mt-4">
               {project.wrapperProject}
             </h1>
             <p className="mt-2 text-gray-600 text-xs tracking-[0.5px] font-light ">
-              {t(`projects-${i + 1}`)}
+              {t(`project-${i + 1}`)}
             </p>
           </div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
@@ -59,7 +61,11 @@ function ProjectsWrapper({ t }) {
           </div>
         </div>
       ))}
-      <ProjectModal project={selectedProject} onClose={closeModal} t={t} />
+      <ProjectModal
+        selectedProject={selectedProject}
+        onClose={closeModal}
+        t={t}
+      />
     </div>
   );
 }
