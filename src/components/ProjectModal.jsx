@@ -87,7 +87,7 @@ function ProjectModal({ selectedProject, onClose, t }) {
                 >
                   <div className="flex justify-center items-center rounded border border-gray-300 px-4 py-2 hover:bg-gray-100 transition-colors gap-x-1.5">
                     <span className="w-4 h-4">{GitHubIconNavbar}</span>
-                    {t("github-link") || "GitHub"}
+                    {"GitHub"}
                   </div>
                 </Link>
               )}
@@ -98,9 +98,9 @@ function ProjectModal({ selectedProject, onClose, t }) {
                   rel="noopener noreferrer"
                   className="w-1/3"
                 >
-                  <div className="flex justify-center items-center rounded border border-gray-300 px-4 py-2 hover:bg-gray-100 transition-colors gap-x-1.5">
+                  <div className="flex justify-center items-center rounded border border-gray-300 px-4 py-2 hover:bg-gray-100 transition-colors gap-x-2">
                     <span className="w-4 h-4">{LinkIcon}</span>
-                    {t("demo-link") || "Demo Link"}
+                    {"Demo Link"}
                   </div>
                 </Link>
               )}

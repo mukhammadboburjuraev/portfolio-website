@@ -15,11 +15,11 @@ function ProjectsWrapper({ t }) {
     setSelectedProject(null);
   };
   return (
-    <div className="grid grid-cols-3 w-[950px] gap-8 ">
+    <div className="grid grid-cols-3 w-[950px] gap-8">
       {projectsJson.map((project, i) => (
         <div
           key={i}
-          className="group relative grid items-start justify-between mt-10 rounded border border-gray-400 p-4 hover:bg-gray-200"
+          className="group relative grid items-start justify-between mt-10 rounded border border-gray-400 p-4 hover:bg-white/70 cursor-pointer"
         >
           <div
             className="absolute inset-0 backdrop-blur-none group-hover:backdrop-blur-xs transition-all duration-400 z-10"
@@ -49,7 +49,7 @@ function ProjectsWrapper({ t }) {
                 className=" px-4 py-2 bg-black rounded text-white hover:bg-black/80 cursor-pointer
               "
               >
-                자세히 보기
+                {t("projects-wrapper-btn")}
               </button>
               <button
                 className="px-4 py-2 bg-black rounded text-white hover:bg-black/80 cursor-pointer
