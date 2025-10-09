@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata = {
   title: "주라에브 무함마드버부르",
@@ -26,6 +27,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="kr">
+      {/* <!-- Google tag (gtag.js) --> */}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-6MR091RP9Z"
+      ></Script>
+      <Script>
+        window.dataLayer = window.dataLayer || []; function gtag()
+        {dataLayer.push(arguments)}
+        gtag('js', new Date()); gtag('config', 'G-6MR091RP9Z');
+      </Script>
       <body>
         <Navbar />
         {children}
